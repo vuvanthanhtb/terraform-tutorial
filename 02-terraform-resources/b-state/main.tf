@@ -16,8 +16,7 @@ resource "aws_instance" "myEC2InstanceUbuntu" {
   ami             = "ami-01938df366ac2d954"
   instance_type   = "t2.micro"
   key_name        = "terraform-study-key-pair"
-  # security_groups = ["default"]
-  subnet_id       = "subnet-0f40b534ab32974b9"
+  security_groups = ["default"]
   tags = {
     Name = "myEC2Instance"
   }
